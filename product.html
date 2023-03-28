@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="jquery-3.6.3.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+      $.ajax({
+          method:"GET",
+          url:"index.xml",
+          dataType:"xml",
+          success:funsmpl
+      })
+  })
+  function funsmpl(xml) {
+      $(xml).find("computer").each(function () {
+          let productname = $(this).find("productname").text();
+          let Price = $(this).find("Price").text();
+          let save = $(this).find("save").text();
+       $(".data").append(
+        `
+          <div class="datacol">
+          <p>${productname}</p>
+          <h6>${Price}</h6>
+          <h5>${save}</h5>
+          </div>
+        `)
+        })}
+  </script>
+    <div class="container">
+        <ul>
+            <li>
+                <img src="./THE.png" width="100" height="100">
+            </li>
+            <li><a href="./index1.html">Home</a>
+            </li>
+            <li>
+                <select aria-placeholder="category">
+                    <option><a href="#">Category</a></option>
+                    <option>Hardware</option>
+                    <option>Desktops/laptops</option>
+                    <option>Apple</option>
+                    <option>Software</option>
+                    <option>Gaming</option>
+                    <option>Tablets</option>
+                </select>
+            </li>
+            <li>
+                <a href="./demo.html"><i class="fa fa-shopping-cart" style="font-size:36px;"></i></a>
+            </li>
+            <li style="float:right">
+                <a href="./login.html"><img src="./account.png" style="font-size:36px;"></a>
+            </li>
+            <li style="float:right">
+                <a href="./enquiry.html"><img src="./letter.png" style="font-size:36px;"></a>
+            </li>
+        </ul>
+    </div>
+<p class="name">PRODUCTS</p><hr>
+    <div class="product">
+       <a href="">
+        <div class="data"></div>
+        <div class="data"></div>
+       </a>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="column">
+                <ul>
+                    <h3>TechBuzz</h3>
+                    <li><a href="">
+                            <h4>About</h4>
+                        </a> </li>
+                    <li><a href="">
+                            <h4>Hacks Blog</h4>
+                        </a></li>
+                    <li> <a href="">
+                            <h4>Careers</h4>
+                        </a></li>
+                    <li>
+                        <a href="">
+                            <h4>Advertise with us</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <h3>Support</h3>
+                    <li><a href="">
+                            <h4>Product help</h4>
+                        </a> </li>
+                    <li><a href="">
+                            <h4>Report an issue</h4>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <h3>Our communities</h3>
+                    <li><a href="">
+                            <h4> Community</h4>
+                        </a> </li>
+                    <li><a href="">
+                            <h4>Forum</h4>
+                        </a></li>
+                    <li><a href="">
+                            <h4> Chat</h4>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <h3>About</h3>
+                    <li><a href="">
+                            <h4> Company</h4>
+                        </a> </li>
+                    <li><a href="">
+                            <h4>Team</h4>
+                        </a></li>
+                    <li><a href="">
+                            <h4>Legacy</h4>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Contact Us</h3>
+                <div class="contact">
+                    <div class="col">
+                        <a href=""> <img src="./phone.png"></a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.instagram.com/_anjali_0390"> <img src="./instagram.png"></a>
+                    </div>
+                    <div class="col">
+                        <a href=""> <img src="./facebook.png"></a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.twitter.com/Anjali0390"> <img src="./twitter.png"></a>
+                    </div>
+                </div><br><hr class="hr">
+                <p>Copyright © 2023 TechBuzz, Inc.</p>
+                <a href="">Privacy Policy |</a>
+                <a href="">|security</a>
+            </div>
+        </div>
+    </div>
+    <div class="last" style="text-align: center; font-family: sans-serif;background-color: rgb(161, 182, 198);padding: 1px;color: rgb(25, 51, 71);">
+        <p style="font-size: 20px; font-weight: bold;      color: rgb(15, 38, 55);">TECHBUZZ</p>
+        <div class="lastcol" style="font-size: 12px;padding: -10px; opacity: .7;">
+            <h4>The one stop destination for all your PC Hardware needs! Build Your Dream Gaming PC / Editing PC / Computer with us!</h4>
+             <h4>205, Second Floor, Royal Township, valak, surat 395006</h4>
+        </div>
+    </div>
+</body>
+</html>
